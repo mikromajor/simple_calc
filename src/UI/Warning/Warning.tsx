@@ -1,8 +1,6 @@
-import "./Warning";
-
-const Warning = ({ message }: { message: string }) => {
+const Warning = ({ styles, message }: { styles:string; message: string }) => {
   return (
-    <div className={"Warning"}>
+    <div className={styles}>
       <h2>{message}</h2>
     </div>
   );

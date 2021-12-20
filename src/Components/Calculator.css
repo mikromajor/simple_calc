@@ -1,0 +1,53 @@
+.Calculator .results, .Calculator .warning, .Calculator .form, .Calculator .input, .Calculator {
+  display: flex;
+  flex-flow: column;
+}
+
+.Calculator .results, .Calculator .warning, .Calculator {
+  border: 3px solid blue;
+  border-radius: 20px;
+}
+
+.Calculator {
+  width: 230px;
+  align-items: stretch;
+  padding: 10px;
+  padding-top: 116px;
+  background-color: #f0f0f0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+}
+.Calculator .select {
+  cursor: pointer;
+  text-align: center;
+}
+.Calculator .input {
+  margin-bottom: 10px;
+}
+.Calculator .submit {
+  cursor: pointer;
+}
+.Calculator .results, .Calculator .warning {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 224px;
+  height: 100px;
+  background-color: yellow;
+  overflow: auto;
+}
+.Calculator .results h2, .Calculator .results h3, .Calculator .warning h2, .Calculator .warning h3 {
+  margin: 0;
+}
+.Calculator .results::-webkit-scrollbar {
+  height: 15px;
+}
+.Calculator .results::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 20px;
+}
+
+.Calculator_padding {
+  padding-top: 10px;
+}
+
+/*# sourceMappingURL=Calculator.css.map */

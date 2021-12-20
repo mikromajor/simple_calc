@@ -1,19 +1,19 @@
-import "./Input.css";
-
 interface InputProps {
   labelText: string;
   id: string;
   state: number;
   setState: React.Dispatch<React.SetStateAction<number>>;
+  styles: string;
 }
 const Input = ({
   labelText,
   id,
   state,
   setState,
+  styles,
 }: InputProps) => {
   return (
-    <div className={"Input"}>
+    <div className={styles}>
       <label htmlFor={id}>{labelText}</label>
       <input
         step={"any"}

@@ -1,19 +1,24 @@
 import { OPERATORS } from "../../constants";
-import "./Select.css";
 interface SelectProps {
   id: string;
   state: string;
   setState: React.Dispatch<React.SetStateAction<string>>;
+  styles: string;
 }
 
-const Select = ({ id, state, setState }: SelectProps) => {
+const Select = ({
+  id,
+  state,
+  setState,
+  styles,
+}: SelectProps) => {
   return (
     <>
       <label htmlFor={id}>
         {"Please, select the operation:"}
       </label>
       <select
-        className={"Select__text_position"}
+        className={styles}
         id={id}
         value={state}
         onChange={(e) => setState(e.currentTarget.value)}

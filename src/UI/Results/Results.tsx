@@ -1,10 +1,11 @@
 interface ResultsProps {
   result: number | null;
+  styles: string;
 }
-const Results = ({ result }: ResultsProps) => {
+const Results = ({ result, styles }: ResultsProps) => {
   return (
-    <div className={"Results"}>
-      <h2>Rounded result: </h2>
+    <div className={styles}>
+      <h3>Rounded result: </h3>
       <h2>{result}</h2>
     </div>
   );

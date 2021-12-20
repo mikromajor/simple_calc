@@ -1,0 +1,57 @@
+$border_radius: 20px
+$main_color: blue
+$result_height: 100px
+$Calculator_padding: 10px
+$main_border: 3px
+
+%flex-column
+  display: flex 
+  flex-flow: column
+%border
+  border: $main_border solid $main_color
+  border-radius: $border_radius
+
+.Calculator
+  @extend %flex-column, %border
+  width: 230px
+  align-items: stretch
+  padding: $Calculator_padding
+  padding-top: $result_height+$Calculator_padding+$main_border*2
+  background-color: #f0f0f0
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7)
+  .select
+    cursor: pointer 
+    text-align: center 
+  .input
+    @extend %flex-column
+    margin-bottom: 10px
+  .submit
+    cursor: pointer
+  .form 
+    @extend %flex-column
+  .results, .warning
+    @extend %flex-column, %border
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center 
+    width: 224px
+    height: $result_height
+    background-color: yellow
+    overflow: auto
+    h2,h3
+      margin: 0
+  .results::-webkit-scrollbar 
+    height: 15px
+  .results::-webkit-scrollbar-thumb 
+    background: $main-color
+    border-radius: $border-radius 
+.Calculator_padding
+  padding-top: 10px
+
+  
+
+
+
+
+
+
